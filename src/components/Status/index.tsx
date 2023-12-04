@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-
+import styles from "./Status.module.scss";
 
 const Status: FC<{
   start: boolean | undefined;
@@ -12,11 +12,10 @@ const Status: FC<{
                 знаки, кроме пробелов, чтобы уложиться в таймер.`
         : `☹ Вы проиграли.`}
     </h1>
-    <div className="start-btn-wrapper">
+    <div className={styles["start-btn-wrapper"]}>
       <button onClick={() => setStart(true)}>Старт</button>
     </div>
   </>
 );
-
 
 export default Status;

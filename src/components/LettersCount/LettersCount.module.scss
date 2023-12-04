@@ -1,0 +1,14 @@
+@import '../../styles/colors.scss';
+
+.quote-letters-count {
+  margin-bottom: 20px;
+}
+
+.badge {
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 4px;
+  color: $white;
+  background-color: $black;
+}

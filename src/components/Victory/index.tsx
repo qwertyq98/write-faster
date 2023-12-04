@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-
+import styles from "../LettersCount/LettersCount.module.scss";
 
 const Victory: FC<{ victory: number }> = ({ victory }) => {
   return (
@@ -7,7 +7,7 @@ const Victory: FC<{ victory: number }> = ({ victory }) => {
       {victory > 0 && (
         <div className="quote-letters-count">
           Побед{victory === 1 ? 'а' : 'ы'}:
-          <span className="badge">{victory}   ʕ ᵔᴥᵔ ʔ</span>
+          <span className={styles.badge}>{victory} 🙂</span>
         </div>
       )}
     </>

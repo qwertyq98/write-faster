@@ -1,11 +1,12 @@
 import React, { FC } from 'react';
+import styles from './LettersCount.module.scss';
 
 const LettersCount: FC<{ quoteLetters: string }> = ({
   quoteLetters
 }) => (
-  <div className="quote-letters-count">
+  <div className={styles['quote-letters-count']}>
     Букв и знаков осталось:
-    <span className="badge">{quoteLetters?.length}</span>
+    <span className={styles.badge}>{quoteLetters?.length}</span>
   </div>
 );
 

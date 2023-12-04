@@ -6,9 +6,9 @@ import ConfettiSplash from "./ConfettiSplash";
 import LettersCount from "./LettersCount";
 import Status from "./Status";
 import Victory from "./Victory";
-
+import Timer from "./Timer";
 import quotes from "../data/quotes.json";
-import "./index.scss";
+import "../styles/index.scss";
 
 const returnQuoteLetters = (quote: string) =>
 quote.replace(/\s/g, "").split("_").join("");
@@ -43,7 +43,6 @@ const Index = () => {
   useEffect(() => {
     const timer =
       counter > 0 && setTimeout(() => setCounter(counter - 1), 1000);
-
 
     if (counter === 0) {
       setStart(false);
@@ -82,7 +81,7 @@ const Index = () => {
         <div className="wrapper">
           {start ? (
             <>
-              <div className="timer">Таймер:{counter}</div>
+              <Timer counter={counter}/>
               <h1>{exception}</h1>
               <div className="info-wrapper">
                 <LettersCount quoteLetters={quoteLetters} />
